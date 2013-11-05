@@ -5,6 +5,8 @@ gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+gem 'pg'
+gem 'cancan'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -20,6 +22,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem "slim-rails"
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -32,7 +36,6 @@ gem 'jquery-rails', '~> 2.3.0'
 
 # bootstrap
 gem 'twitter-bootstrap-rails'
-
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
