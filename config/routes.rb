@@ -11,7 +11,11 @@ Doska::Application.routes.draw do
   
   get 'post:id' => 'ads#show'
   
+  # Userpanel registration/login/logout
   get 'userpanel' => 'userpanel#index'
+  get 'registration' => 'userpanel#registration'
+  get 'login' => 'userpanel#login'
+  get 'logout' => 'userpanel#logout'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

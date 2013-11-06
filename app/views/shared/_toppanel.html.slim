@@ -8,5 +8,14 @@
       a.brand.sitename href="/" Кемеровская доска объявлений
       .nav-collapse.collapse
         .nav.pull-right
+          li.dropdown
+            a.dropdown-toggle href="#" data-toggle="dropdown"
+              | Личный кабинет
+              b.caret
+            ul.dropdown-menu
+              li
+                = link_to 'Личный кабинет', userpanel_path
+                = link_to 'Регистрация', registration_path
+                a href="#" Вход
           li
             a href="#" Правила сайта

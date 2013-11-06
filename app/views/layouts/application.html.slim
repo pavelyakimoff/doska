@@ -1,0 +1,49 @@
+doctype html
+html
+  head
+    title Doska
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application" 
+    = csrf_meta_tags
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+  body
+    = render "shared/toppanel"
+    .container.under_navbar
+      .row
+        .span4
+          .new_ad
+            = link_to 'Новое объявление', userpanel_path, { class: 'btn btn-warning'}
+          #leftMenu.accordion
+            .accordion-group
+              .accordion-heading
+                a.accordion-toggle data-toggle="collapse" data-parent="#leftMenu" href="#collapseTwo"
+                  i.icon-th
+                  |   Одежда, обувь, аксессуары
+              #collapseTwo.accordion-body.collapse.in
+                .accordion-inner
+                  ul
+                    li
+                      a href="#" This is one
+                    li
+                      a href="#" This is one
+                    li
+                      a href="#" This is one
+            .accordion-group
+              .accordion-heading
+                a.accordion-toggle data-toggle="collapse" data-parent="#leftMenu" href="#collapseThree"
+                  i.icon-th
+                  | Одежда, обувь, аксессуары
+              #collapseThree.accordion-body.collapse.in
+                .accordion-inner
+                  ul
+                    li
+                      a href="#" This is one
+                    li
+                      a href="#" This is one
+                    li
+                      a href="#" This is one
+        .span8
+          == yield
